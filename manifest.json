@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Schedule Click",
+  "version": "1.0",
+  "description": "Click any element at a scheduled time.",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Schedule Click"
+  },
+  "permissions": ["tabs", "activeTab", "scripting"]
+}
