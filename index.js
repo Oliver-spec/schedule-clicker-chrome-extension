@@ -1,21 +1,21 @@
-const injectScript = () => {
+function injectScript() {
   const timeToClick = new Date(
     document.getElementById("time-to-click").value
   ).getTime();
-  // const clickCount = document.getElementById("click-count-selector").value;
-  // const targetBtnId = document.getElementById("id-selector").value;
 
   document.getElementById("status").innerHTML = "Time Set 😛";
 
   let clicked = false;
 
   setInterval(() => {
-    let remainingTime = (timeToClick - Date.now()) / 1000
+    let remainingTime = (timeToClick - Date.now()) / 1000;
 
     if (!clicked) {
-      document.getElementById("timer").innerHTML = `Seconds remaining: ${remainingTime}`
+      document.getElementById(
+        "timer"
+      ).innerHTML = `Seconds remaining: ${remainingTime}`;
     } else {
-      document.getElementById("timer").innerHTML = "Clicked!"
+      document.getElementById("timer").innerHTML = "Clicked!";
     }
 
     if (!clicked && timeToClick <= Date.now()) {
@@ -27,7 +27,6 @@ const injectScript = () => {
               console.log("clicked");
             }
           },
-          // args: [targetBtnId],
           target: {
             tabId: tabs[0].id,
           },
@@ -38,6 +37,6 @@ const injectScript = () => {
       clicked = true;
     }
   }, 1);
-};
+}
 
 document.getElementById("set-time-btn").addEventListener("click", injectScript);

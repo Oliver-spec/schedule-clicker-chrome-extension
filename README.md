@@ -1,8 +1,13 @@
-# Schedule Clicker
+# Description
 
-To schedule an automatic click, input the id of the desired element, the time to click it, and the number of times you want to click
-the element.
+Automatically enroll CUHK classes at the specified time.
 
-### For elements without an id
+# Tech used
 
-Right click and inspect the element to add an id to it.
+Frontend: Vanilla JavaScript
+
+Styling: Vanilla CSS
+
+Backend: None
+
+Database: None
