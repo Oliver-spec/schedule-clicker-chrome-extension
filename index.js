@@ -13,7 +13,7 @@ function injectScript() {
     if (!clicked) {
       document.getElementById(
         "timer"
-      ).innerHTML = `Seconds remaining: ${remainingTime}`;
+      ).innerHTML = `Seconds remaining: ${remainingTime.toFixed(1)}`;
     } else {
       document.getElementById("timer").innerHTML = "Clicked!";
     }
@@ -24,7 +24,6 @@ function injectScript() {
           func: () => {
             if (document.getElementById("DERIVED_SSR_FL_SSR_ENROLL_FL")) {
               document.getElementById("DERIVED_SSR_FL_SSR_ENROLL_FL").click();
-              console.log("clicked");
             }
           },
           target: {
